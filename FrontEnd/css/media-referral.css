@@ -1,0 +1,10 @@
+@media screen and (max-width: 800px) {
+    .referral>div {
+        max-width: 310px;
+        min-width: 310px;
+    }
+
+    .referral .title>span {
+        font-size: 24px;
+    }
+}

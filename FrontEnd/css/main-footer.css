@@ -1,0 +1,12 @@
+footer {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, #000000, #ffffff00 75%);
+    padding: 30px 0;
+}
+
+footer>div>span {
+    font-family: "CarterOne";
+    font-size: 30px;
+    color: #fff;
+}

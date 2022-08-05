@@ -1,0 +1,11 @@
+@media screen and (max-width: 800px) {
+    .contacts>div {
+        max-width: 310px;
+        min-width: 310px;
+    }
+
+    .contacts ul {
+        max-width: 290px;
+        min-width: 290px;
+    }
+}

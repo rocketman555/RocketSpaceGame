@@ -1,0 +1,802 @@
+header {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+    background: linear-gradient(0deg, #ffffff00, #3e3e3e 70%, #2a78cc69 80%, #ffffff00 110%);
+    width: 100%;
+    padding-top: 10px;
+}
+
+header>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 310px;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    min-width: 300px;
+}
+
+header .logo>div {
+    display: flex;
+    align-items: center;
+}
+
+header .logo>div:first-child {
+    margin-bottom: -5px;
+}
+
+header .logo>div:nth-child(2) {
+    margin: 5px 0;
+    background: linear-gradient(90deg, #00000000, #ffffff, #00000000);
+    height: 1px;
+    width: 100%;
+}
+
+header .logo>div:last-child {
+    margin-top: -15px;
+}
+
+header .logo>div>span {
+    font-family: "CarterOne";
+    color: #fff;
+}
+
+header .logo>div:first-child>span {
+    font-size: 60px;
+}
+
+header .logo>div:first-child>.rocket:last-child {
+    transform: rotate(45deg) scale(-1, 1);
+}
+
+header .logo>div:last-child>span {
+    font-size: 35px;
+}
+
+header .logo>div:last-child>span:last-child {
+    transform: scale(1, -1);
+}
+
+header .logo>div>.emoji {
+    height: 65px;
+    width: 65px;
+}
+
+header .sublogo {
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+header .sublogo>div {
+    display: flex;
+    align-items: center;
+}
+
+header .sublogo>div>.emoji {
+    height: 25px;
+    width: 25px;
+}
+
+header .sublogo>div>.emoji.moon {
+    height: 20px;
+    width: 20px;
+}
+
+header .sublogo>div>.emoji.star {
+    height: 23px;
+    width: 23px;
+}
+
+header .sublogo>div>span {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 500;
+}
+
+header .sublogo>div:first-child>span {
+    color: #3498db;
+}
+
+header .sublogo>div:nth-child(2)>span {
+    color: #d35400;
+}
+
+header .sublogo>div:last-child>span {
+    color: #fcea2b;
+}
+
+header .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    max-width: 310px;
+}
+
+header .buttons>.network,
+header .buttons>.launch {
+    margin-top: 5px;
+}
+
+header .buttons>.connect>button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #38507c;
+    border-radius: 10px;
+    background: #000;
+    height: 40px;
+    width: 220px;
+    padding: 0 5px;
+    transition: border-color 500ms ease-in-out;
+}
+
+header .buttons>.connect.disconnected.beacon>button {
+    transition: border-color 600ms ease-in-out;
+    border-color: #d35400;
+}
+
+header .buttons>.connect.disconnected>button:hover {
+    cursor: pointer;
+    border-color: #d35400;
+}
+
+header .buttons>.connect.disconnected>button:hover>span {
+    color: #3498db;
+}
+
+header .buttons>.connect.disconnected>button:hover>.emoji {
+    transform: scale(1.25, 1.25) rotate(45deg);
+}
+
+header .buttons>.connect>button>span {
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #fff;
+    transition: color 500ms ease-in-out;
+}
+
+header .buttons>.connect>button>span:nth-child(2) {
+    margin: 5px 0 0 10px;
+}
+
+header .buttons>.connect.connected>button>span:nth-child(2) {
+    color: #d35400;
+}
+
+header .buttons>.connect>button>.emoji {
+    height: 30px;
+    width: 30px;
+    transition: transform 250ms ease-in-out;
+}
+
+header .buttons>.connect>button>.img {
+    height: 25px;
+    width: 25px;
+}
+
+header .buttons>.tg-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #38507c;
+    border-radius: 10px;
+    margin-left: 5px;
+    background: #000;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    transition: border-color 500ms ease-in-out;
+}
+
+header .buttons>.tg-link:hover {
+    cursor: pointer;
+    border-color: #d35400;
+}
+
+header .buttons>.tg-link>a {
+    text-decoration: none;
+}
+
+header .buttons>.tg-link>a>span {
+    filter: invert(100%) sepia(16%) saturate(0%) hue-rotate(115deg) brightness(103%) contrast(101%);
+    height: 25px;
+    width: 25px;
+}
+
+header .buttons>.lang {
+    z-index: 10;
+    position: relative;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #38507c;
+    border-radius: 10px;
+    margin-left: 5px;
+    background: #000;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    transition: border-color 500ms ease-in-out;
+}
+
+header .buttons>.lang>span::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    height: 5px;
+    width: 100%;
+    cursor: auto;
+}
+
+header .buttons>.lang>ul {
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    display: none;
+    border: 2px solid #38507c;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    background: #000;
+    width: 100%;
+    padding: 5px 0;
+    transform-origin: top center;
+}
+
+header .buttons>.lang>ul>li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0 1px 5px 1px;
+    height: 34px;
+    width: 34px;
+    list-style-type: none;
+    transition: background-color 500ms ease-in-out;
+}
+
+header .buttons>.lang>ul>li:last-child {
+    margin-bottom: 0;
+}
+
+header .buttons>.lang>ul>.active {
+    background-color: #38507c;
+}
+
+header .buttons>.lang:hover>ul>.active {
+    background-color: #38507c;
+    cursor: default;
+}
+
+header .buttons>.lang>ul>li:hover {
+    background-color: #d35400;
+}
+
+header .buttons>.lang:hover {
+    cursor: pointer;
+    border-color: #d35400;
+}
+
+header .buttons>.lang:hover>ul {
+    cursor: pointer;
+}
+
+header .buttons>.lang .emoji {
+    height: 30px;
+    width: 30px;
+}
+
+header .buttons>.network {
+    z-index: 10;
+    position: relative;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #38507c;
+    border-radius: 10px;
+    background: #000;
+    height: 40px;
+    width: 135px;
+    box-sizing: border-box;
+    transition: border-color 500ms ease-in-out;
+}
+
+header .buttons>.network>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0 1px 0 1px;
+    height: 34px;
+    width: 108px;
+    padding: 0 10px;
+    list-style-type: none;
+}
+
+header .buttons>.network>div>.chain {
+    height: 25px;
+    width: 25px;
+}
+
+header .buttons>.network>div>span:last-child {
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #fff;
+}
+
+header .buttons>.network>div::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    height: 5px;
+    width: 100%;
+    cursor: auto;
+}
+
+header .buttons>.network>ul {
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    display: none;
+    border: 2px solid #38507c;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    background: #000;
+    width: 100%;
+    padding: 5px 0;
+    transform-origin: top center;
+}
+
+header .buttons>.network>ul>li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0 1px 5px 1px;
+    height: 34px;
+    width: 108px;
+    padding: 0 10px;
+    list-style-type: none;
+    transition: background-color 500ms ease-in-out;
+}
+
+header .buttons>.network>ul>li>span:last-child {
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #fff;
+}
+
+header .buttons>.network>ul>li:last-child {
+    margin-bottom: 0;
+}
+
+header .buttons>.network>ul>.active {
+    background-color: #38507c;
+    cursor: default;
+}
+
+header .buttons>.network:hover>ul>.active {
+    background-color: #38507c;
+}
+
+header .buttons>.network>ul>li:hover {
+    background-color: #d35400;
+}
+
+header .buttons>.network:hover {
+    cursor: pointer;
+    border-color: #d35400;
+}
+
+header .buttons>.network:hover>ul {
+    cursor: pointer;
+}
+
+header .buttons>.network>ul>li>.chain {
+    height: 25px;
+    width: 25px;
+}
+
+header .buttons>.launch>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #38507c;
+    border-radius: 10px;
+    margin-left: 5px;
+    background: #000;
+    height: 40px;
+    width: 170px;
+    padding: 0 5px;
+    transition: border-color 500ms ease-in-out;
+}
+
+header .buttons>.launch>button>span {
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #fff;
+    transition: color 500ms ease-in-out;
+}
+
+header .buttons>.launch>button:hover {
+    cursor: pointer;
+    border-color: #d35400;
+}
+
+header .buttons>.launch>button:hover>span {
+    color: #3498db;
+}
+
+header .buttons>.launch>button:hover>span:nth-child(2) {
+    color:#d35400;
+}
+
+header .buttons>.launch>button:hover>span:nth-child(3) {
+    color:#d35400;
+}
+
+header .buttons>.launch>button:hover {
+    cursor: pointer;
+    border-color: #d35400;
+}
+
+header .buttons>.launch>button:hover>span:nth-child(4) {
+    color:#d35400;
+}
+
+header .buttons>.launch.beacon>button>span:nth-child(2) {
+    color:#d35400;
+}
+
+header .buttons>.launch.beacon>button>span:nth-child(3) {
+    color:#d35400;
+}
+
+header .buttons>.launch.beacon>button>span:nth-child(4) {
+    color:#d35400;
+}
+
+header .buttons>.launch>button>span:nth-child(1) {
+    margin-top: 3px;
+}
+
+header .buttons>.launch>button>span:nth-child(2) {
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: normal;
+    transition: color 200ms ease-in-out;
+}
+
+header .buttons>.launch>button>span:nth-child(3) {
+    font-size: 22px;
+    font-weight: normal;
+    transition: color 400ms ease-in-out;
+}
+
+header .buttons>.launch>button>span:nth-child(4) {
+    font-size: 22px;
+    font-weight: normal;
+    transition: color 600ms ease-in-out;
+}
+
+header .quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #d35400;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: #000;
+    height: 60px;
+    max-width: 310px;
+    min-width: 310px;
+    box-sizing: border-box;
+    box-shadow: 0px -5px 10px #2a78ccaa;
+}
+
+header .quote>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header .quote>div>div {
+    display: flex;
+    align-items: center;
+}
+
+header .quote>div>div>span {
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+}
+
+header .quote>div>div:first-child>span:first-child {
+    margin-right: 5px;
+    color: #3498db;
+}
+
+header .quote>div>div:first-child>span:nth-child(2) {
+    margin-right: 5px;
+    color: #d35400;
+}
+
+header .quote>div>div:first-child>span:nth-child(3) {
+    margin-right: 5px;
+    color: #fcea2b;
+}
+
+header .quote>div>div:last-child>span {
+    letter-spacing: -0.3px;
+    font-size: 15px;
+}
+
+header .quote>span {
+    border: 2px solid #38507c;
+    border-radius: 100%;
+    margin-left: 15px;
+    height: 45px;
+    width: 45px;
+}
+
+header .quote .rocket {
+    transform: rotate(0deg);
+    margin: 0 -5px 1px 2px;
+    height: 25px;
+    width: 25px;
+}
+
+header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 15px;
+    background: #000;
+    max-width: 770px;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px -5px 10px #2a78ccaa;
+    box-sizing: border-box;
+}
+
+header .menu>div {
+    display: flex;
+    align-items: center;
+    border-color: #38507c;
+}
+
+header .menu>div>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+header .menu>div>a:hover>span {
+    color: #d35400;
+}
+
+header .menu>div>div {
+    margin: 0 10px;
+    background: linear-gradient(0deg, #ffffff00, #f7630c, #ffffff00);
+    height: 30px;
+    width: 1px;
+}
+
+header .menu>div>a>span {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    transition: color 500ms ease-in-out;
+}
+
+header .menu>div>a>span:last-child {
+    height: 25px;
+    width: 25px;
+}
+
+header .menu>div:first-child>div {
+    width: 2px;
+}
+
+header .menu>div:last-child>div:last-child {
+    width: 2px;
+}
+
+header .emoji,
+header .img,
+header .svg,
+header .chain,
+header .img {
+    display: block;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-origin: content-box !important;
+}
+
+header .rocket {
+    transform: rotate(-45deg);
+    background: url('../img/emoji/u1f680.svg');
+}
+
+header .fire {
+    transform: rotate(-180deg);
+    background: url('../img/emoji/u1f525.svg');
+}
+
+header .moon {
+    background: url('../img/emoji/u1f317.svg');
+}
+
+header .mars {
+    background: url('../img/emoji/u1fa90.svg');
+}
+
+header .star {
+    background: url('../img/emoji/u1f31f.svg');
+}
+
+header .link {
+    transform: rotate(45deg);
+    background: url('../img/emoji/u1f517.svg');
+}
+
+header .check {
+    background: url('../img/emoji/u2714.svg');
+}
+
+header .gear {
+    background: url('../img/emoji/u2699.svg');
+}
+
+header .pencil {
+    background: url('../img/emoji/u270f.svg');
+}
+
+header .scroll {
+    background: url('../img/emoji/u1f4dc.svg');
+}
+
+header .compass {
+    background: url('../img/emoji/u1f9ed.svg');
+}
+
+header .handshake {
+    background: url('../img/emoji/u1f91d.svg');
+}
+
+header .en {
+    background: url('../img/emoji/u1f1fa-u1f1f8.png');
+}
+
+header .ru {
+    background: url('../img/emoji/u1f1f7-u1f1fa.png');
+}
+
+header .bsc {
+    background: url('../img/chains/bsc.png');
+}
+
+header .matic {
+    background: url('../img/chains/matic.png');
+}
+
+header .avax {
+    background: url('../img/chains/avax.png');
+}
+
+header .ftm {
+    background: url('../img/chains/ftm.png');
+}
+
+header .tg {
+    background: url('../img/social/tg.svg');
+}
+
+header .metatrust {
+    background: url('../img/metatrust.png');
+}
+
+header .gagarin {
+    background: url('../img/gagarin.jpg');
+}
+
+@-moz-keyframes showMenu {
+    0% {
+      transform: rotateX(-90deg);
+    }
+    70% {
+      transform: rotateX(20deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+}
+@-webkit-keyframes showMenu {
+    0% {
+      transform: rotateX(-90deg);
+    }
+    70% {
+      transform: rotateX(20deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+}
+@-o-keyframes showMenu {
+    0% {
+      transform: rotateX(-90deg);
+    }
+    70% {
+      transform: rotateX(20deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+}
+@keyframes showMenu {
+    0% {
+      transform: rotateX(-90deg);
+    }
+    70% {
+      transform: rotateX(20deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+}
+
+@-moz-keyframes hideMenu {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(-90deg);
+    }
+}
+@-webkit-keyframes hideMenu {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(-90deg);
+    }
+}
+@-o-keyframes hideMenu {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(-90deg);
+    }
+}
+@keyframes hideMenu {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(-90deg);
+    }
+}

@@ -1,0 +1,6 @@
+@media screen and (max-width: 800px) {
+    .videoreview>div {
+        max-width: 310px;
+        min-width: 310px;
+    }
+}

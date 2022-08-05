@@ -1,0 +1,11 @@
+@media screen and (max-width: 800px) {
+    .about>div {
+        max-width: 310px;
+        min-width: 310px;
+    }
+
+    .about ul {
+        max-width: 300px;
+        min-width: 300px;
+    }
+}

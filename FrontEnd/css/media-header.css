@@ -1,0 +1,43 @@
+@media screen and (max-width: 800px) {
+    header {
+        background: linear-gradient(0deg, #ffffff00, #3e3e3e 80%, #2a78cc69 86%, #ffffff00 110%);
+    }
+
+    header .menu {
+        flex-direction: column;
+        border-radius: 0;
+        margin-top: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    header .menu>div {
+        display: flex;
+        justify-content: center;
+        border: 2px solid #38507c;
+        border-radius: 10px;
+        margin-top: 5px;
+        background: #000;
+        height: 40px;
+        min-width: 310px;
+        box-sizing: border-box;
+        transition: border-color 500ms ease-in-out;
+    }
+
+    header .menu>div:first-child {
+        margin-top: 0;
+    }
+
+    header .menu>div>div{
+        display: none;
+    }
+
+    header .menu>div:hover {
+        cursor: pointer;
+        border-color: #d35400;
+    }
+
+    header .menu>div:hover>a>span {
+        color: #3498db;
+    }
+}
